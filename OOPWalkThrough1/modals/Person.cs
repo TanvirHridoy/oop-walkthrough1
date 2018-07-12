@@ -19,13 +19,16 @@ namespace OOPWalkThrough1.modals
         {
             get { return GetFullName(); }
         }
-
+        public string Reversename
+        {
+            get { return GetReverseName(); }
+        }
 
         private String GetFullName()
         {
             return Firstname + " " + Middlename + " " + Lastname;
         }
-        public String GetReverseName()
+        private String GetReverseName()
         {
                if (GetFullName() == null) return null;
                char[] array = GetFullName().ToCharArray();
