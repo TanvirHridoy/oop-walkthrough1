@@ -10,14 +10,14 @@ namespace OOPWalkThrough1
         {
             InitializeComponent();
         }
-        Person aPerson = new Person();
+        Person aPerson ;
         private void showButton_Click(object sender, EventArgs e)
         {
 
-            aPerson.Firstname = firstNameTextBox.Text;
-            aPerson.Middlename = middleNameTextBox.Text;
-            aPerson.Lastname = lastNameTextBox.Text;
-
+            //aPerson.Firstname = firstNameTextBox.Text;
+            //aPerson.Middlename = middleNameTextBox.Text;
+            //aPerson.Lastname = lastNameTextBox.Text;
+            Person aPerson=new Person(firstNameTextBox.Text,middleNameTextBox.Text,lastNameTextBox.Text);
             fullNameTextBox.Text = aPerson.Fullname;
             reverseNameTextBox.Text = aPerson.Reversename;
 

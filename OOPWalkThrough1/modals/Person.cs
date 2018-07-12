@@ -8,6 +8,13 @@ namespace OOPWalkThrough1.modals
 {
     class Person
     {
+        public Person(string firstname, string middlename, string lastname)
+        {
+
+            Firstname = firstname;
+            Middlename = middlename;
+            Lastname = lastname;
+        }
         public string Lastname { get; set; }
 
 
