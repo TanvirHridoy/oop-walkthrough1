@@ -14,9 +14,9 @@ namespace OOPWalkThrough1
         private void showButton_Click(object sender, EventArgs e)
         {
 
-            aPerson.firstname = firstNameTextBox.Text;
-            aPerson.middlename = middleNameTextBox.Text;
-            aPerson.lastname = lastNameTextBox.Text;
+            aPerson.Firstname = firstNameTextBox.Text;
+            aPerson.Middlename = middleNameTextBox.Text;
+            aPerson.Lastname = lastNameTextBox.Text;
 
             fullNameTextBox.Text = aPerson.GetFullName();
             reverseNameTextBox.Text = aPerson.GetReverseName();
