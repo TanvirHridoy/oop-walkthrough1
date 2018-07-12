@@ -8,30 +8,20 @@ namespace OOPWalkThrough1.modals
 {
     class Person
     {
-        private string firstname;
-        private string middlename;
-        private string lastname;
+        public string Lastname { get; set; }
 
 
-        public string Lastname
+        public string Middlename { get; set; }
+
+        public string Firstname { get; set; }
+
+        public string Fullname
         {
-            get { return lastname; }
-            set { lastname = value; }
+            get { return GetFullName(); }
         }
 
-        public string Middlename
-        {
-            get { return middlename; }
-            set { middlename = value; }
-        }
 
-        public string Firstname
-        {
-            get { return firstname; }
-            set { firstname = value; }
-        }
-
-        public String GetFullName()
+        private String GetFullName()
         {
             return Firstname + " " + Middlename + " " + Lastname;
         }

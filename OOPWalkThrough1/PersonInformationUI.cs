@@ -18,7 +18,7 @@ namespace OOPWalkThrough1
             aPerson.Middlename = middleNameTextBox.Text;
             aPerson.Lastname = lastNameTextBox.Text;
 
-            fullNameTextBox.Text = aPerson.GetFullName();
+            fullNameTextBox.Text = aPerson.Fullname;
             reverseNameTextBox.Text = aPerson.GetReverseName();
 
         }
