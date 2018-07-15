@@ -35,10 +35,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.showButton = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.fullNameTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.reverseNameTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.fullNameTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FIRST_NAME = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MIDDLE_NAME = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.LAST_NAME = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.showallButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // firstNameTextBox
@@ -91,7 +98,7 @@
             // 
             // showButton
             // 
-            this.showButton.Location = new System.Drawing.Point(240, 77);
+            this.showButton.Location = new System.Drawing.Point(310, 351);
             this.showButton.Name = "showButton";
             this.showButton.Size = new System.Drawing.Size(75, 23);
             this.showButton.TabIndex = 7;
@@ -99,43 +106,98 @@
             this.showButton.UseVisualStyleBackColor = true;
             this.showButton.Click += new System.EventHandler(this.showButton_Click);
             // 
-            // label4
+            // reverseNameTextBox
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Full Name";
-            // 
-            // fullNameTextBox
-            // 
-            this.fullNameTextBox.Location = new System.Drawing.Point(112, 111);
-            this.fullNameTextBox.Name = "fullNameTextBox";
-            this.fullNameTextBox.Size = new System.Drawing.Size(273, 20);
-            this.fullNameTextBox.TabIndex = 9;
+            this.reverseNameTextBox.Location = new System.Drawing.Point(112, 421);
+            this.reverseNameTextBox.Name = "reverseNameTextBox";
+            this.reverseNameTextBox.Size = new System.Drawing.Size(273, 20);
+            this.reverseNameTextBox.TabIndex = 12;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 140);
+            this.label5.Location = new System.Drawing.Point(28, 424);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
-            this.label5.TabIndex = 8;
+            this.label5.TabIndex = 10;
             this.label5.Text = "Reverse Name";
             // 
-            // reverseNameTextBox
+            // fullNameTextBox
             // 
-            this.reverseNameTextBox.Location = new System.Drawing.Point(112, 137);
-            this.reverseNameTextBox.Name = "reverseNameTextBox";
-            this.reverseNameTextBox.Size = new System.Drawing.Size(273, 20);
-            this.reverseNameTextBox.TabIndex = 9;
+            this.fullNameTextBox.Location = new System.Drawing.Point(112, 395);
+            this.fullNameTextBox.Name = "fullNameTextBox";
+            this.fullNameTextBox.Size = new System.Drawing.Size(273, 20);
+            this.fullNameTextBox.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(52, 398);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Full Name";
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.FIRST_NAME,
+            this.MIDDLE_NAME,
+            this.LAST_NAME});
+            this.listView1.Location = new System.Drawing.Point(532, 77);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(353, 248);
+            this.listView1.TabIndex = 14;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // ID
+            // 
+            this.ID.Text = "id";
+            this.ID.Width = 50;
+            // 
+            // FIRST_NAME
+            // 
+            this.FIRST_NAME.Text = "first name";
+            this.FIRST_NAME.Width = 100;
+            // 
+            // MIDDLE_NAME
+            // 
+            this.MIDDLE_NAME.Text = "middle name";
+            this.MIDDLE_NAME.Width = 100;
+            // 
+            // LAST_NAME
+            // 
+            this.LAST_NAME.Text = "lastname";
+            this.LAST_NAME.Width = 100;
+            // 
+            // showallButton
+            // 
+            this.showallButton.Location = new System.Drawing.Point(810, 21);
+            this.showallButton.Name = "showallButton";
+            this.showallButton.Size = new System.Drawing.Size(75, 23);
+            this.showallButton.TabIndex = 15;
+            this.showallButton.Text = "Show All:";
+            this.showallButton.UseVisualStyleBackColor = true;
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.Location = new System.Drawing.Point(136, 117);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton.TabIndex = 16;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = true;
             // 
             // PersonInformationUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 174);
+            this.ClientSize = new System.Drawing.Size(925, 572);
+            this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.showallButton);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.reverseNameTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.fullNameTextBox);
@@ -167,9 +229,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button showButton;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox fullNameTextBox;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox reverseNameTextBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox fullNameTextBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader FIRST_NAME;
+        private System.Windows.Forms.ColumnHeader MIDDLE_NAME;
+        private System.Windows.Forms.ColumnHeader LAST_NAME;
+        private System.Windows.Forms.Button showallButton;
+        private System.Windows.Forms.Button SaveButton;
     }
 }
