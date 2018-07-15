@@ -8,13 +8,27 @@ namespace OOPWalkThrough1.modals
 {
     class Person
     {
-        public Person(string firstname, string middlename, string lastname)
-        {
+        //private string Firstname = "";
+        //private string Middlename = "";
+        //private string Lastname = "";
+        public Person()
+            {
+        
+            }
+        public Person(string firstname):this()
+            {
+                this.Firstname = firstname;
+            }
 
-            Firstname = firstname;
-            Middlename = middlename;
-            Lastname = lastname;
+        public Person(string firstname, string lastname) : this(firstname)
+        {
+            this.Lastname = lastname;
         }
+        public Person(string firstname, string middlename, string lastname):this(firstname,lastname)
+            {
+               
+                this.Middlename = middlename;
+            }
         public string Lastname { get; set; }
 
 
@@ -31,11 +45,11 @@ namespace OOPWalkThrough1.modals
             get { return GetReverseName(); }
         }
 
-        private String GetFullName()
+        private string GetFullName()
         {
             return Firstname + " " + Middlename + " " + Lastname;
         }
-        private String GetReverseName()
+        private string GetReverseName()
         {
                if (GetFullName() == null) return null;
                char[] array = GetFullName().ToCharArray();
